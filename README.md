@@ -1,4 +1,5 @@
 # Azure-Cloud-Security-Hardening
+![Screenshot 2023-09-07 193428](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c92f149-d82b-46a8-b688-7b5213de3727)
 
 ## Introduction
 In my Azure SOC Lab, both the Windows VM and Linux VM where receiving large volumes of malicious activity such as password brute force attempts on Azure AD, Microsoft SQL server and Linux SSH server as well as DDOS attacks. This was due to impromperly configured security settings, which were exposing the virtual machines to the public internet, allowing traffic from any IP Address on any port. Using the NIST 800-53 Security Controls framework, I was able to reduce the amount of malicious traffic affecting my Azure Cloud environment by 95%.
@@ -35,6 +36,13 @@ Azure's Microsoft Defender for Cloud gave me the following recommendations for s
 ![Screenshot 2023-09-07 192758](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/0992994b-9445-4476-b083-ea3c663e5e96)
 
 ## Configuring Private Endpoint Access to Azure Key Vault 
+![Screenshot 2023-09-12 221130](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e0d5f1e7-be00-4173-91e0-fc39eba29a53)
+![Screenshot 2023-09-12 221221](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/79250461-b422-49a7-8689-8b2186f30f5f)
+![Screenshot 2023-09-12 221255](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/acc35748-3fb3-439c-b63f-9aaf115410ce)
+![Screenshot 2023-09-12 221316](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/06ab6f60-fc2b-4fbe-96ef-08c84f1849fe)
+
+## Verifying that you have successfully configured private endpoints
+![Screenshot 2023-09-07 194757](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/67de11b8-44d5-4438-a979-3d5735e2b7dd)
 
 ## Conclusion
 
