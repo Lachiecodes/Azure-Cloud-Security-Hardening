@@ -19,7 +19,9 @@ Azure's Microsoft Defender for Cloud gave me the following recommendations for s
 ![Screenshot 2023-09-07 190615](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/88345ec8-e132-42e4-a080-a21c8dca21e6)
 
 ## Configuring and Hardening Network Security Groups
+![Screenshot 2023-09-07 200607](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/6fe25e75-d941-45a2-8deb-8582030414d5)
 
+![Screenshot 2023-09-07 200646](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/d8b2d8ca-3f49-42a4-8226-8f228d98704b)
 
 ## Configuring Private Endpoint Access to Azure Key Vault and Blob Storage
 
