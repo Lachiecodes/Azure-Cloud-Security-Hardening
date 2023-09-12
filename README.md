@@ -1,4 +1,4 @@
-# Azure-Could-Security-Hardening
+# Azure-Cloud-Security-Hardening
 
 ## Introduction
 
