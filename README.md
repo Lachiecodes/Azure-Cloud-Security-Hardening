@@ -27,7 +27,9 @@ Azure's Microsoft Defender for Cloud gave me the following recommendations for s
 
 
 ## Enabling Firewall on Azure Key Vault 
+![Screenshot 2023-09-07 192007](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c7ec466-ab6a-40f4-97ee-05ae3ebb5b86)
 
+![Screenshot 2023-09-07 192617](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e6f954d9-0954-4465-9bb9-1f8aca3216e1)
 
 ## Conclusion
 
