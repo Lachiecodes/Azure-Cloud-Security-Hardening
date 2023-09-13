@@ -42,10 +42,15 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 - Now, navigate to Storage Accounts, select the account connect your subscription and go to the Networking tab again.
 - This is similiar to the Key Vault, go to the Firewall and network settings and under "public network access" select disabled.<br>
 
-![Screenshot 2023-09-07 192617](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e6f954d9-0954-4465-9bb9-1f8aca3216e1)
+![Screenshot 2023-09-07 192617](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e6f954d9-0954-4465-9bb9-1f8aca3216e1)<br>
+- Next, navigate to the configuration tab and disable "allow blob anonymous access".
+- This option prevents public access to containers and blobs within a storage account without proper authentication and authorization.<br>
+<br>
+
+  ![Screenshot 2023-09-07 192456](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/641df0f3-9e02-49f1-a9c9-a3d2e08a3b17)
 
 ## Configuring Private Endpoint Access to Azure Blob Storage
-![Screenshot 2023-09-07 192456](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/641df0f3-9e02-49f1-a9c9-a3d2e08a3b17)
+
 ![Screenshot 2023-09-12 220338](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/be48d1c9-a8e4-4f86-bfab-92afb704469a)
 ![Screenshot 2023-09-07 192732](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/b411ba3e-cb18-46f9-8e86-62eb6e5e6ebe)
 ![Screenshot 2023-09-07 192758](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/0992994b-9445-4476-b083-ea3c663e5e96)
