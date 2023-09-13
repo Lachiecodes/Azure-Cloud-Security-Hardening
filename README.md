@@ -1,4 +1,4 @@
-# Azure Cloud Security Hardening
+# Applying NIST 800-53 Controls to Improve Azure Cloud Security Posture
 ![Screenshot 2023-09-07 193428](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c92f149-d82b-46a8-b688-7b5213de3727)
 
 ## Introduction
@@ -6,7 +6,7 @@ In my Azure SOC-Honeypot Lab, both the Windows VM and Linux VM were receiving hi
 
 As part of the lab project, I intentionally permitted traffic from any IP address to serve as an example of poor security settings. This was done to generate logs and gather data about malicious actors on the internet. Having now collected this valuable data, the next step involves appropriately configuring the security settings to ensure the safety of the cloud environment from potential attacks, based on the NIST 800-53 Security Controls framework.
 
-## Applying NIST 800-53 Security Controls
+## NIST 800-53 Security Controls Framework
 The control from NIST 800-53 that deals with securing network endpoints is Section SC-7: Boundary Protection. Within the context of this control, an information system should adhere to the following directives:<br>
 <br>
 a. Monitors and controls communications at the external boundary of the system and at key internal boundaries within the system; <br>
