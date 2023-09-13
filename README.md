@@ -1,4 +1,4 @@
-# Azure-Cloud-Security-Hardening
+# Azure Cloud Security Hardening
 ![Screenshot 2023-09-07 193428](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c92f149-d82b-46a8-b688-7b5213de3727)
 
 ## Introduction
