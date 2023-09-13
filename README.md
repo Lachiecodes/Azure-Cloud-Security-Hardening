@@ -26,12 +26,21 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 - From your Azure Account main page go to to Network Security Groups.
 - For each VMs NSG, add a new rule for inbound connections. Set the priority to the lowest (100) to ensure this rule will be followed first.
 - Select the source section, and select IP Addresses, and enter in the addresses from which you will be allowing access to this machine.
-- If you are only accessing it from one IP Address, you can select the "My IP Address", and Azure will automatically detect and  add your current ip address.<br>
+- If you are only accessing it from one IP Address, you can select the "My IP Address", and Azure will automatically detect and  add your current address.<br>
 ![Screenshot 2023-09-07 200607](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/6fe25e75-d941-45a2-8deb-8582030414d5)
 
 
 ## Enabling Firewall on Azure Key Vault and Blob Storage
-![Screenshot 2023-09-07 192007](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c7ec466-ab6a-40f4-97ee-05ae3ebb5b86)
+- The next step is for us to disable public access to our Azure Key Vault and Blob Storage services.
+- Navigate to Key Vault, select the vault connected to your subscription and go to the Networking tab.
+- In the Firewalls and virtual network settings, select "disable public access".
+- By selecting this option you are configuring the Key Vault to be accessible only from within your virtual network (VNet) or selected virtual networks and not accessible from the public internet. This provides an additional layer of security by restricting access to the Key Vault to resources within your trusted Azure VNets or specific IP ranges you have defined.<br>
+<br>
+
+![Screenshot 2023-09-07 192007](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c7ec466-ab6a-40f4-97ee-05ae3ebb5b86)<br>
+
+- Now, navigate to Storage Accounts, select the account connect your subscription and go to the Networking tab again.
+- This is similiar to the Key Vault, go to the Firewall and network settings and under "public network access" select disabled.<br>
 
 ![Screenshot 2023-09-07 192617](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e6f954d9-0954-4465-9bb9-1f8aca3216e1)
 
