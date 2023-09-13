@@ -2,7 +2,7 @@
 ![Screenshot 2023-09-07 193428](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c92f149-d82b-46a8-b688-7b5213de3727)
 
 ## Introduction
-In my Azure SOC Lab, both the Windows VM and Linux VM where receiving large volumes of malicious activity such as password brute force attempts on Azure AD, Microsoft SQL server and Linux SSH server as well as DDOS attacks. This was due to impromperly configured security settings, which were exposing the virtual machines to the public internet, allowing traffic from any IP Address on any port. Using the NIST 800-53 Security Controls framework, I was able to reduce the amount of malicious traffic affecting my Azure Cloud environment by 95%.
+In my Azure SOC Lab, both the Windows VM and Linux VM were receiving high volumes of malicious activity, including password brute force attempts on Azure AD, Microsoft SQL Server, and Linux SSH Server, along with DDoS attacks. These incidents were a result of improperly configured security settings, which had exposed the virtual machines to the public internet, permitting traffic from any IP address on any port. By applying the NIST 800-53 Security Controls framework, I successfully mitigated 95% of the malicious traffic impacting my Azure Cloud environment.
 
 ## Applying NIST 800-53 Security Controls
 The control from NIST 800-53 that deals whith securing network endpoints is Section SC-7: Boundary Protection. Within the context of this control, an information system should adhere to the following directives:<br>
