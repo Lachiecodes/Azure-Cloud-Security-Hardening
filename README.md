@@ -27,6 +27,7 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 - For each VMs NSG, add a new rule for inbound connections. Set the priority to the lowest (100) to ensure this rule will be followed first.
 - Select the source section, and select IP Addresses, and enter in the addresses from which you will be allowing access to this machine.
 - If you are only accessing it from one IP Address, you can select the "My IP Address", and Azure will automatically detect and  add your current address.<br>
+
 ![Screenshot 2023-09-07 200607](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/6fe25e75-d941-45a2-8deb-8582030414d5)
 
 
@@ -43,23 +44,43 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 - This is similiar to the Key Vault, go to the Firewall and network settings and under "public network access" select disabled.<br>
 
 ![Screenshot 2023-09-07 192617](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e6f954d9-0954-4465-9bb9-1f8aca3216e1)<br>
+
 - Next, navigate to the configuration tab and disable "allow blob anonymous access".
 - This option prevents public access to containers and blobs within a storage account without proper authentication and authorization.<br>
 <br>
 
   ![Screenshot 2023-09-07 192456](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/641df0f3-9e02-49f1-a9c9-a3d2e08a3b17)
 
-## Configuring Private Endpoint Access to Azure Blob Storage
+## Configuring Private Endpoint Access to Azure Key Vault and Blob Storage
+- Creating a private endpoint for Azure Storage and Azure Key Vault enhances the security and network isolation of these services by allowing you to access them privately within your virtual network (VNet) instead of over the public internet.
 
-![Screenshot 2023-09-12 220338](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/be48d1c9-a8e4-4f86-bfab-92afb704469a)
-![Screenshot 2023-09-07 192732](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/b411ba3e-cb18-46f9-8e86-62eb6e5e6ebe)
-![Screenshot 2023-09-07 192758](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/0992994b-9445-4476-b083-ea3c663e5e96)
+**Azure Storage Account**
+- Navigate to the Networking tab again, but this time you want to go to private endpoint connections settings.
+- Click + to create a new private endpoint and make sure in the basics settings that you select the correct resource group and name it appropriately.<br>
 
-## Configuring Private Endpoint Access to Azure Key Vault 
-![Screenshot 2023-09-12 221130](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e0d5f1e7-be00-4173-91e0-fc39eba29a53)
-![Screenshot 2023-09-12 221221](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/79250461-b422-49a7-8689-8b2186f30f5f)
-![Screenshot 2023-09-12 221255](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/acc35748-3fb3-439c-b63f-9aaf115410ce)
-![Screenshot 2023-09-12 221316](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/06ab6f60-fc2b-4fbe-96ef-08c84f1849fe)
+![Screenshot 2023-09-12 220338](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/be48d1c9-a8e4-4f86-bfab-92afb704469a)<br>
+
+- In the resource settings, select "blob" as the target sub-resource group.<br>
+
+![Screenshot 2023-09-07 192732](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/b411ba3e-cb18-46f9-8e86-62eb6e5e6ebe)<br>
+
+- Lastly, go to the virtual network settings and select "dynamically allocate IP Address", and allocate it to the correct VNet associated with your desired resource group. <br>
+
+![Screenshot 2023-09-07 192758](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/0992994b-9445-4476-b083-ea3c663e5e96)<br>
+<br>
+
+**Azure Key Vault**
+- This same process can be repeated for Azure Key Vault, click + to create a new private endpoint, select the correct resource group and name it appropriately.<br>
+
+![Screenshot 2023-09-12 221130](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/e0d5f1e7-be00-4173-91e0-fc39eba29a53)<br>
+
+
+![Screenshot 2023-09-12 221221](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/79250461-b422-49a7-8689-8b2186f30f5f)<br>
+
+
+![Screenshot 2023-09-12 221255](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/acc35748-3fb3-439c-b63f-9aaf115410ce)<br>
+
+
 
 ## Verifying that you have successfully configured private endpoints
 ![Screenshot 2023-09-07 194757](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/67de11b8-44d5-4438-a979-3d5735e2b7dd)
