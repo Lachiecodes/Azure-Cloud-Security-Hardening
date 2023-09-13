@@ -4,6 +4,13 @@
 ## Introduction
 In my Azure SOC Lab, both the Windows VM and Linux VM were receiving high volumes of malicious activity, including password brute force attempts on Azure AD, Microsoft SQL Server, and Linux SSH Server, along with DDoS attacks. These incidents were a result of improperly configured security settings, which had exposed the virtual machines to the public internet, permitting traffic from any IP address on any port. By applying the NIST 800-53 Security Controls framework, I successfully mitigated 95% of the malicious traffic impacting my Azure Cloud environment.
 
+The high volumes of malicious traffic were occurring because of improperly configured security settings within the network security groups of the VMs. I intentionally permitted traffic from any IP address as a demonstration of poor security settings in my lab project, aiming to generate logs and gather data about malicious actors on the internet. Now that I have collected this data, it's time to appropriately configure the security settings to ensure the safety of the cloud environment from potential attacks:
+
+
+In my Azure SOC Lab, both the Windows VM and Linux VM were receiving high volumes of malicious activity, including password brute force attempts on Azure AD, Microsoft SQL Server, and Linux SSH Server, as well as DDoS attacks. These incidents were a result of improperly configured security settings, which had exposed the virtual machines to the public internet, permitting traffic from any IP address on any port.
+
+As part of the lab project, I intentionally permitted traffic from any IP address to serve as an example of poor security settings. This was done to generate logs and gather data about malicious actors on the internet. Having now collected this valuable data, the next step involves appropriately configuring the security settings to ensure the safety of the cloud environment from potential attacks, based NIST 800-53 Security Controls framework.
+
 ## Applying NIST 800-53 Security Controls
 The control from NIST 800-53 that deals whith securing network endpoints is Section SC-7: Boundary Protection. Within the context of this control, an information system should adhere to the following directives:<br>
 <br>
@@ -21,9 +28,12 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 ![Screenshot 2023-09-07 190615](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/88345ec8-e132-42e4-a080-a21c8dca21e6)
 
 ## Configuring and Hardening Network Security Groups
+- From your Azure Account main page go to to Network Security Groups.
+- For each VMs NSG, add a new rule for inbound connections. Set the priority to the lowest (100) to ensure this rule will be followed first.
+- Select the source section, and select IP Addresses, and enter in the addresses from which you will be allowing access to this machine.
+- If you are only accessing it from one IP Address, you can select the "My IP Address", and Azure will automatically detect and  add your current ip address.<br>
 ![Screenshot 2023-09-07 200607](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/6fe25e75-d941-45a2-8deb-8582030414d5)
 
-![Screenshot 2023-09-07 200646](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/d8b2d8ca-3f49-42a4-8226-8f228d98704b)
 
 ## Enabling Firewall on Azure Key Vault and Blob Storage
 ![Screenshot 2023-09-07 192007](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/7c7ec466-ab6a-40f4-97ee-05ae3ebb5b86)
