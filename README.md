@@ -87,5 +87,6 @@ I opted to use this section from NIST 800-53 because, given the malicious activi
 - Once created, we will use `nslookup` to ensure that these private endpoints have been created successfully.
 - For the Storage Account, navigate to the Endpoints tab and copy the "Primary Endpoint" address without the http:// prefix and enter the command `nslookup ADDRESS`.
 - For the Key Vault, navigate to the Properties tab and copy the "Vault URI" without the http:// prefix and enter the same command with the vault address.
-- If your private endpoints have been correctly configured, you will receive back a private IP address such as 10.x.x.x.
-![Screenshot 2023-09-07 194757](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/67de11b8-44d5-4438-a979-3d5735e2b7dd)
+- If your private endpoints have been correctly configured, you will receive back a private IP address such as 10.x.x.x.<br>
+![Screenshot 2023-09-07 194757](https://github.com/Lachiecodes/Azure-Cloud-Security-Hardening/assets/138475757/a4aa4563-4ac1-41c8-846c-09929ce15250)
+
